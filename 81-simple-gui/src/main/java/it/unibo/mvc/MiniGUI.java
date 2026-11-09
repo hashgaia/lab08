@@ -2,6 +2,7 @@ package it.unibo.mvc;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
+import java.awt.TextField;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -47,6 +48,9 @@ public class MiniGUI {
 
         frame.setContentPane(canvas);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        final TextField result = new TextField(); 
+        canvas.add(result, BorderLayout.NORTH);
 
         write.addActionListener(new ActionListener() {
             @Override
